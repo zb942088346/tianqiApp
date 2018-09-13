@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+header{
+    height: 0.88rem;
+    width: auto;
+    background-color: #52AFE8;
+    font-size: 0.33rem;
+    color: #fff;
+    text-align: center;
+    line-height: .88rem;
+    position: relative;
+}
+.audioBtn{
+    width: .88rem;
+    height: .88rem;
+    background-image: url("img/bixby.png");
+    background-size:contain;
+    position: absolute;
+    top: 0;
+    right:.24rem;
+}
+.screen{
+    width: auto;
+    height: 8.2rem;
+    background-color: #52AFE9;
+    background-image: url(img/screen.png),url(img/water.png),url(img/water_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: relative;
+    color:#fff;
+    text-align: center;
+    overflow: hidden;
+}
+.screen::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url();
+}
+.screen .aqi{
+    width: 0.76rem;
+    height: 0.88rem;
+    border-radius: 0.1rem;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.24rem;
+    font-size: 0.3rem;
+    color: #fff;
+}
+.screen h3{
+    margin-top:2.2rem;
+    font-size: 1rem;
+}
+.screen h3::after{
+    content: "°";
+
+}
+.screen h4{
+    font-size: 0.5rem;
+}
+.screen h5{
+    font-size: 0.3rem;
+}
+.day{
+    width: auto;
+    height: 2rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.day>div{
+    width: 50%;
+    height: 1.04rem;
+    background-color: #fff;
+    font-size: 0.24rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.day>div span{
+    padding: 0.05rem 0.43rem;
+}
+.day>div span img{
+    width: 0.71rem;
+}
+.hours{
+    width: 100%;
+    height: 2.9rem;
+    margin-top: .2rem;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.hours::-webkit-scrollbar{
+    display: none;
+}
+.hours .con{
+    width: auto;
+    height: 2.9rem;
+    display: flex;
+}
+.hours .con .box{
+    width: 1.14rem;
+    height: 1.6rem;
+    margin-top:.6rem;
+     font-size: .24rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+.hours .con .box img{
+   width: .48rem;
+   height: .48rem;
+   margin: .2rem;
+}
+
+.citybox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: none;
+    overflow-y: auto
+}
+.citybox .seacher{
+    width: auto;
+    margin: 0 0.24rem;
+    height: 0.88rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.01rem 
+    }
+.citybox .seacher input{
+    width: 5rem;
+    height: 0.4rem;
+    padding: 0.1rem 0 0.1rem 0.64rem;
+    background-color: #f2f2f2;
+    display: block;
+    margin-top: 0.12rem;
+    border:none;
+    border-radius: 0.4rem;
+    outline: none;
+    }
+.citybox .seacher .button{
+    width: 1.3rem;
+    height: 0.88rem;
+    background-color: #fff;
+    border: none;
+    font-size: 0.14rem;
+    margin: .28rem .07rem;
+    }
+.citybox h2{
+    padding: 0.24rem;
+    font-size: 0.3rem;
+    color: red;
+    }
+.citybox .con{
+    padding: 0 0.24rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.citybox .con div{
+    width: 2.2rem;
+    height: 0.64rem;
+    background-color: #f2f2f2;
+    border-radius: 0.64rem;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.64rem;
+    margin-bottom: 0.2rem;
+    font-size: .3rem;
+}
+.week{
+    width: auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+.week::-webkit-scrollbar{
+    display: none;
+}
+.week li{
+    width: 1.25rem;
+    font-size: 0.24rem;
+    color: #b2b2b2;
+    line-height: 0.24rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+.week li .day1,.week li .data{
+    height: 0.24rem;
+}
+.week li .data{
+    margin: 0.1rem 0 0.3rem;
+}
+.week li img{
+    display: block;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin:0 auto;
+}
+.week li .dayweatherimg{
+    margin-bottom: 2.72rem;
+}
+.week li .dayweather{
+    margin-bottom: 0.28rem;
+}
+.week li .nightweather{
+    margin:0.32rem 0 0.4rem;
+}
+.week li .wind{
+    margin-bottom: 0.12rem;
+}
+body{
+    position: relative;
+}
+#solid{
+    position: absolute;
+    left:0;
+    bottom: 1rem;
+}
