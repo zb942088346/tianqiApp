@@ -127,15 +127,56 @@ function updata(data){
             yAxis: {
                 show:false,
             },
+            legend: {
+                
+                x: 'center',               // 水平安放位置，默认为全图居中，可选为：
+                                           // 'center' ¦ 'left' ¦ 'right'
+                                           // ¦ {number}（x坐标，单位px）
+                y: 'bottom',
+            },
             series: [{
-                name: '销量',
+                name: '最高温度',
                 type: 'line',
                 data: height,
+                symbol:'circle',
+                symbolSize:5,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        color:'#333',
+                    }
+                },
+                itemStyle : {
+                    normal : {
+                        color:'#00FF00',
+                        lineStyle:{
+                            color:'#00FF00'
+                        }
+                    }
+                },
             },
                 {
-                name: '销量',
+                name: '最低温度',
                 type: 'line',
+                symbol:'circle',
+                symbolSize:5,
                 data:low,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom',
+                        color:'#333',
+                    }
+                },
+                itemStyle : {
+                    normal : {
+                        color:'#52AFE8',
+                        lineStyle:{
+                            color:'#52AFE8'
+                        }
+                    }
+                },
             },
             ],
             grid:{
@@ -143,7 +184,9 @@ function updata(data){
                 top:0,
                 right:0,
                 bottom:0,
-            }
+            },
+           
+           
     
         };
     
