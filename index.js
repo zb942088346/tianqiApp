@@ -200,7 +200,7 @@ function updata(data){
             let speechset=new SpeechSynthesisUtterance();
             speechset.rate = 1;
 
-            let text=$("header span").text()+"当前温度"+$(".screen h3 span").text()+"摄氏度"+$(".screen h4 span").text()+"祝您一天生活愉快"
+            let text="Bixby为您语音播报"+$("header span").text()+"今天的天气"+"当前温度"+$(".screen h3 span").text()+"摄氏度"+$(".screen h4 span").text()+"祝您一天生活愉快"
             speechset.text=text;
             speech.speak(speechset);
         })
